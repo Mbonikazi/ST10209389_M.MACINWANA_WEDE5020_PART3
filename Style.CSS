@@ -1,0 +1,234 @@
+/* style.css */
+/* Basic reset and variables */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+:root {
+  --base-font: "Aptos", Arial, sans-serif;
+  --base-font-size: 16px;
+
+  /* Modern Stylish Colors */
+  --primary: #1E1F28;        /* Deep Indigo / Navy */
+  --accent: #FF6B6B;         /* Vibrant Coral */
+  --highlight: #FFC107;      /* Bright Yellow */
+  --secondary: #E0E0E0;      /* Cool Gray */
+  --muted: #6B6B6B;          /* Light Gray text */
+  --background: #FAFAFA;     /* Soft White */
+  --container-width: 1100px;
+  --gap: 1rem;
+}
+
+/* Body Styling */
+body {
+  font-family: var(--base-font);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0.1px;
+  color: #1E1F28;
+  background-color: var(--background);
+}
+
+/* Headings & Paragraphs */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+h2 {
+  font-size: 1.7rem;
+  color: var(--primary);
+}
+p {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+small {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* Container & Grid */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.site-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: var(--gap);
+  align-items: start;
+}
+.header,
+.footer {
+  grid-column: 1 / -1;
+}
+.main {
+  grid-column: 1 / 2;
+}
+.sidebar {
+  grid-column: 2 / 3;
+}
+
+/* Header & Navigation */
+header {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background: var(--primary);
+  color: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+nav a {
+  color: #FAFAFA;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--accent);
+}
+.active-link {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #FAFAFA;
+}
+.btn-primary:hover {
+  background: var(--highlight);
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: #FAFAFA;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Image Styles */
+img {
+  max-width: 100%;
+  border-radius: 6px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Typography */
+@media (min-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (min-width: 601px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+.giveaway {
+  background: linear-gradient(135deg, #FF6B6B, #FFD700);
+  color: #1E1F28;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.giveaway h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.giveaway p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.giveaway-btn {
+  display: inline-block;
+  background: #1E1F28;
+  color: #FFD700;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.giveaway-btn:hover {
+  background: #FFD700;
+  color: #1E1F28;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
+.enquiry-wizard {
+  max-width: 500px;
+  margin: 3rem auto;
+  text-align: center;
+}
+.form-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+.hidden { display: none; }
+button {
+  padding: 0.8rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #FF6B6B, #FFD700);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
+
+
